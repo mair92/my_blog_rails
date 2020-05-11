@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   # get 'contacts' => 'contacts#new'
   resources :contacts, only: [:new, :create], path_names: { :new => ''}
   resources :articles
+  resources :terms
+
 end
