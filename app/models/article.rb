@@ -1,4 +1,4 @@
 class Article < ApplicationRecord
-  has_many :cooments
+  has_many :comments
 end
 
