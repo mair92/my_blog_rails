@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-
+  before_action :authenticate_user!
   def index
     @articles = Article.all
     end
@@ -41,7 +41,7 @@ class ArticlesController < ApplicationController
     # вариант 1
     #redirect_to articles_path
 
-    # вариант 2
+    # вариант 2 
     redirect_to action: :index
   end
 
