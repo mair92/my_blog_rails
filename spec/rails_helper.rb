@@ -24,6 +24,7 @@ require 'rspec/rails'
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
+
 begin
   ActiveRecord::Migration.maintain_test_schema!
 rescue ActiveRecord::PendingMigrationError => e
@@ -68,3 +69,5 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+#require 'factory_bot.rb'
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
